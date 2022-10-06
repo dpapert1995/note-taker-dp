@@ -12,6 +12,8 @@ fs.readFile("./db/db.json","json",function(data) {
     var notes = data;
 });
 
+var noteCount = 0;
+
 // Require routes files for HTML and API
 require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
