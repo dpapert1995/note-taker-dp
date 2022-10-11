@@ -71,10 +71,9 @@ const handleNoteSave = () => {
     title: noteTitle.value,
     text: noteText.value,
   };
-  saveNote(newNote).then(() => {
+  saveNote(newNote);
     getAndRenderNotes();
     renderActiveNote();
-  });
 };
 
 // Delete the clicked note
@@ -89,10 +88,9 @@ const handleNoteDelete = (e) => {
     activeNote = {};
   }
 
-  deleteNote(noteId).then(() => {
+  deleteNote(noteId);
     getAndRenderNotes();
     renderActiveNote();
-  });
 };
 
 // Sets the activeNote and displays it
@@ -144,7 +142,8 @@ const renderNoteList = async (notes) => {
         'fa-trash-alt',
         'float-right',
         'text-danger',
-        'delete-note'
+        'delete-note',
+        'data-id="+i+"'
       );
       delBtnEl.addEventListener('click', handleNoteDelete);
 
