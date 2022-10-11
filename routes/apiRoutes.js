@@ -20,7 +20,7 @@ module.exports = app => {
     // Receives a new note, adds it to db.json, then returns the new note
     app.post("/api/notes", function(req, res) {
         let noteNew = req.body;
-        notes[noteCount++] = noteNew;
+        notes.push(noteNew);
         updateDataBase();
         return console.log("Added new note: "+ noteNew.title);
     });
@@ -32,7 +32,7 @@ module.exports = app => {
 
      // Deletes a note at a specific index
      app.delete("/api/notes/:id", function(req, res) {
-        delete notes[req.params.id];
+        notes.splice(req.params.id, 1);
         updateDataBase();
         console.log("Deleting note at index "+req.params.id);
     });

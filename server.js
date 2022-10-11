@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3001;
 // Set up middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(__dirname));
 
 // Require routes files for HTML and API
 require('./routes/apiRoutes.js')(app);
