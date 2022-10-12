@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname));
 
-// Require routes files for HTML and API
+// Require routes files 
 require('./routes/apiRoutes.js')(app);
 
 // Setup listener
