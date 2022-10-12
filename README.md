@@ -1,4 +1,4 @@
-  ## Team Profile Generator
+  ## Note Taking App
 
   ## Deployed Application on Heroku
   https://note-taker-dp-heroku.herokuapp.com/
@@ -10,9 +10,9 @@
 
 	Clone the repository to your local development environment.
 
-	```
-	git clone https://github.com/dpapert1995/note-taker-dp.git
-	```
+	
+		git clone https://github.com/dpapert1995/note-taker-dp.git
+	
 
 	- Navigate to the directory using the command prompt.
 
